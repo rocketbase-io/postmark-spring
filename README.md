@@ -1,8 +1,7 @@
 # postmark-spring
 
 [![Build Status](https://travis-ci.com/rocketbase-io/postmark-spring.svg?branch=master)](https://travis-ci.com/rocketbase-io/postmark-spring)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-spring/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-springpostmark-spring.svg)
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-spring/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-spring)
 
 ![postmark-spring](assets/postmark-spring.svg)
 
