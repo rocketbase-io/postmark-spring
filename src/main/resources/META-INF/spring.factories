@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.rocketbase.mail.config.PostmarkAutoConfiguration
