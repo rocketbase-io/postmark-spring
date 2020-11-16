@@ -15,7 +15,7 @@ public class WebhookMessageTest {
     @Test
     public void testBounce() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/bounce.json");
+        URL json = ClassLoader.getSystemResource("webhook/bounce.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
@@ -38,7 +38,7 @@ public class WebhookMessageTest {
     @Test
     public void testClick() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/click.json");
+        URL json = ClassLoader.getSystemResource("webhook/click.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
@@ -63,7 +63,7 @@ public class WebhookMessageTest {
     @Test
     public void testDelivery() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/delivery.json");
+        URL json = ClassLoader.getSystemResource("webhook/delivery.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
@@ -84,7 +84,7 @@ public class WebhookMessageTest {
     @Test
     public void testOpen() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/open.json");
+        URL json = ClassLoader.getSystemResource("webhook/open.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
@@ -107,7 +107,7 @@ public class WebhookMessageTest {
     @Test
     public void testSpamComplaint() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/spam-complaint.json");
+        URL json = ClassLoader.getSystemResource("webhook/spam-complaint.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
@@ -128,7 +128,7 @@ public class WebhookMessageTest {
     @Test
     public void testSubscriptionChange() throws Exception {
         // given
-        URL json = ClassLoader.class.getResource("/webhook/subscription-change.json");
+        URL json = ClassLoader.getSystemResource("webhook/subscription-change.json");
 
         // when
         WebhookMessage message = objectMapper.readValue(json, WebhookMessage.class);
