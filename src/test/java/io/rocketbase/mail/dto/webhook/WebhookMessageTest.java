@@ -1,7 +1,7 @@
 package io.rocketbase.mail.dto.webhook;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.net.URL;
 

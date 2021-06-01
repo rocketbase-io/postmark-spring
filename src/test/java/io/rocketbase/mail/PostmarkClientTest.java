@@ -5,8 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.rocketbase.mail.config.PostmarkProperties;
 import io.rocketbase.mail.dto.*;
 import io.rocketbase.mail.util.MessageJsonWriter;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 
 import java.io.File;
 import java.net.URL;
@@ -17,7 +18,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class PostmarkClientTest {
 
-    @Ignore
+    @Disabled
     @Test
     public void testDeliverMessage() {
         // given
