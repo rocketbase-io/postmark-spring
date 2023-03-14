@@ -1,7 +1,6 @@
 package io.rocketbase.mail.dto.webhook;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-import lombok.Getter;
 
 public enum WebhookRecordType {
 
@@ -12,12 +11,15 @@ public enum WebhookRecordType {
     CLICK("Click"),
     SUBSCRIPTION_CHANGE("SubscriptionChange");
 
-    @Getter
-    @JsonValue
+
     private String value;
 
     WebhookRecordType(String value) {
         this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+        return this.value;
+    }
 }

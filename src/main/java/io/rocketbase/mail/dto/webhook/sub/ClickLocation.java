@@ -8,12 +8,14 @@ public enum ClickLocation {
     HTML("HTML"),
     TEXT("Text");
 
-    @Getter
-    @JsonValue
     private String value;
 
     ClickLocation(String value) {
         this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
 }

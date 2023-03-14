@@ -9,7 +9,6 @@ public class MessageResponse {
     private String bcc;
     private Date submittedAt;
     private String messageId;
-
     private Integer errorCode;
     private String message;
 }

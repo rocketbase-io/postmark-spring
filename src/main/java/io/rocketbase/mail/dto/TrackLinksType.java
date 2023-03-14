@@ -10,12 +10,14 @@ public enum TrackLinksType {
     HTML_AND_TEXT("HtmlAndText"),
     TEXT_ONLY("TextOnly");
 
-    @Getter
-    @JsonValue
     private String value;
 
     TrackLinksType(String value) {
         this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+        return this.value;
+    }
 }

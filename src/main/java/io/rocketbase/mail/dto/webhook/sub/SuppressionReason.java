@@ -8,12 +8,15 @@ public enum SuppressionReason {
     SPAM_COMPLAINT("SpamComplaint"),
     MANUAL_SUPPRESSION("ManualSuppression");
 
-    @Getter
-    @JsonValue
     private String value;
 
     SuppressionReason(String value) {
         this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return this.value;
     }
 
 }
