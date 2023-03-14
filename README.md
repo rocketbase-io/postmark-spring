@@ -1,9 +1,11 @@
 # postmark-spring
 
-[![Build Status](https://travis-ci.com/rocketbase-io/postmark-spring.svg?branch=master)](https://travis-ci.com/rocketbase-io/postmark-spring)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-spring/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rocketbase.mail/postmark-spring)
-
 ![postmark-spring](assets/postmark-spring.svg)
+
+
+![build](https://github.com/rocketbase-io/postmark-spring/actions/workflows/ci.yml/badge.svg)
+[![Maven Central](https://badgen.net/maven/v/maven-central/io.rocketbase.mail/postmark-spring)](https://mvnrepository.com/artifact/io.rocketbase.mail/postmark-spring)
+
 
 Vanilla spring version of handling postmark's rest-api.
 
