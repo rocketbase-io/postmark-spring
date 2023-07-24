@@ -8,9 +8,10 @@ import io.rocketbase.mail.util.MessageJsonWriter;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 import java.io.File;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -34,6 +35,29 @@ public class PostmarkClientTest {
 
         // when
         MessageResponse response = client.deliverMessage(message);
+        // then
+        assertThat(response, notNullValue());
+    }
+
+
+    @Disabled
+    @Test
+    public void testDeliverMessageWithTemplate() {
+        // given
+        Map templateObject = new HashMap();
+        templateObject.put("product_name", "RocketBase");
+        templateObject.put("product_url", "https://www.rocketbase.io");
+        templateObject.put("company_name", "RocketBase");
+        templateObject.put("company_address", "Katharinenstraße 30a, 20457 Hamburg");
+        templateObject.put("task_name", "task-name");
+        templateObject.put("message", "Had some issues...\nplease take a look");
+
+        PostmarkClient client = new PostmarkClient(new PostmarkProperties("--"));
+        MessageWithTemplate message = new MessageWithTemplate(new EmailAddress("info@rocketbase.io"),
+                new EmailAddress("marten@rocketbase.io", "Marten Prieß"), "application-error", templateObject);
+
+        // when
+        MessageResponse response = client.deliverMessageWithTemplate(message);
         // then
         assertThat(response, notNullValue());
     }
