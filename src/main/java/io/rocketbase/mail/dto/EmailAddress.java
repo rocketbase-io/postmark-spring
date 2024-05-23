@@ -19,9 +19,9 @@ public class EmailAddress {
 
     public String toRecipient() {
         if (!StringUtils.isEmpty(name)) {
-            return String.format("\"%s\" <%s>", name, email);
+            return "\"%s\" <%s>".formatted(name, email);
         } else {
-            return String.format("<%s>", email);
+            return "<%s>".formatted(email);
         }
     }
 }
