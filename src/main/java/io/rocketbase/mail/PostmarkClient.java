@@ -4,6 +4,7 @@ import io.rocketbase.mail.config.PostmarkProperties;
 import io.rocketbase.mail.dto.EmailAttachment;
 import io.rocketbase.mail.dto.Message;
 import io.rocketbase.mail.dto.MessageResponse;
+import io.rocketbase.mail.dto.MessageWithTemplate;
 import io.rocketbase.mail.util.MessageJsonWriter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
@@ -66,6 +67,15 @@ public class PostmarkClient {
                 new HttpEntity<>(messages, buildHeaders()),
                 new ParameterizedTypeReference<List<MessageResponse>>() {
                 });
+        return response.getBody();
+    }
+
+    public MessageResponse deliverMessageWithTemplate(MessageWithTemplate msg) {
+        ResponseEntity<MessageResponse> response = getRestTemplate().exchange(createUriBuilder().path("/email/withTemplate")
+                        .toUriString(),
+                HttpMethod.POST,
+                new HttpEntity<>(msg, buildHeaders()),
+                MessageResponse.class);
         return response.getBody();
     }
 
