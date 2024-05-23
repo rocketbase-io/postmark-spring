@@ -1,7 +1,11 @@
 package io.rocketbase.mail.dto;
 
+import lombok.Data;
+import lombok.Getter;
+
 import java.util.Date;
 
+@Data
 public class MessageResponse {
 
     private String to;

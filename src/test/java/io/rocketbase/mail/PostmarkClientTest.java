@@ -23,7 +23,7 @@ public class PostmarkClientTest {
     @Test
     public void testDeliverMessage() {
         // given
-        PostmarkClient client = new PostmarkClient(new PostmarkProperties("--"));
+        PostmarkClient client = new DefaultPostmarkClient(new PostmarkProperties("--"));
         Message message = new Message(new EmailAddress("info@rocketbase.io"),
                 new EmailAddress("marten@rocketbase.io", "Marten Prieß"), "Postmark Spring-Client",
                 "<h1>My little Text</h2><p>Great to hear...</p><p><a href=\"http://www.rocketbase.io\">Link</a>",
@@ -52,7 +52,7 @@ public class PostmarkClientTest {
         templateObject.put("task_name", "task-name");
         templateObject.put("message", "Had some issues...\nplease take a look");
 
-        PostmarkClient client = new PostmarkClient(new PostmarkProperties("--"));
+        PostmarkClient client = new DefaultPostmarkClient(new PostmarkProperties("--"));
         MessageWithTemplate message = new MessageWithTemplate(new EmailAddress("info@rocketbase.io"),
                 new EmailAddress("marten@rocketbase.io", "Marten Prieß"), "application-error", templateObject);
 

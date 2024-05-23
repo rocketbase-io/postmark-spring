@@ -1,6 +1,5 @@
 package io.rocketbase.mail.dto.webhook;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
@@ -9,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
-import java.util.Date;
 import java.util.Map;
 
 @Data
@@ -33,7 +31,7 @@ public class DeliveryWebhookMessage implements WebhookMessage{
     private String tag;
 
     @JsonProperty("DeliveredAt")
-    @JsonDeserialize(using = PostmarkInstantDeserialzer.class)
+    @JsonDeserialize(using = PostmarkInstantDeserializer.class)
     private Instant deliveredAt;
 
     @JsonProperty("Details")

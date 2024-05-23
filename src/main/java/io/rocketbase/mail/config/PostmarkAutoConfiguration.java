@@ -1,6 +1,7 @@
 package io.rocketbase.mail.config;
 
 import io.rocketbase.mail.PostmarkClient;
+import io.rocketbase.mail.DefaultPostmarkClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -21,7 +22,7 @@ public class PostmarkAutoConfiguration implements Serializable {
     @ConditionalOnMissingBean
     @ConditionalOnProperty(name = "postmark.enabled", matchIfMissing = true)
     public PostmarkClient postmarkClient() {
-        return new PostmarkClient(postmarkProperties);
+        return new DefaultPostmarkClient(postmarkProperties);
     }
 
 }

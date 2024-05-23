@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
 
-public class PostmarkInstantDeserialzer extends JsonDeserializer<Instant> {
+public class PostmarkInstantDeserializer extends JsonDeserializer<Instant> {
 
     @Override
     public Instant deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
